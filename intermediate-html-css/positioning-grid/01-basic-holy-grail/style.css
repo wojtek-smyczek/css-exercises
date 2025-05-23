@@ -6,6 +6,18 @@ html {
 
 .container {
   text-align: center;
+  display: grid;
+  gap: 15px;
+  grid-auto-columns: 300px;
+  grid-auto-rows: 100px;
+  grid-template-areas:
+    "header header header header"
+    "sidebar nav nav nav"
+    "sidebar art art art"
+    "sidebar art art art"
+    "sidebar art art art"
+    "sidebar art art art"
+    "foot foot foot foot";
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
@@ -21,22 +33,27 @@ html {
 }
 
 .header {
+  grid-area: header;
   background-color: #006157;
 }
 
 .sidebar {
+  grid-area: sidebar;
   background-color: #005B94;
 }
 
 .nav {
+  grid-area: nav;
   background-color: #642cde;
 }
 
 .article {
+  grid-area: art;
   background-color: #7E1DC3;
 }
 
 .footer {
+  grid-area: foot;
   background-color: #393f4d;
 }
 
